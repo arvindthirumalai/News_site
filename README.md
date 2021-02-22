@@ -4,7 +4,7 @@ Arvind Thirumalai
 arvindthirumalai
 
 Creative Portion Features:
-1) Like a story and show how many likes each story has
+1) Delete Account
 2) Change password
 
 
