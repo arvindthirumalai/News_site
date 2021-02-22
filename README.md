@@ -1,20 +1,17 @@
 # CSE330
 Arvind Thirumalai
-473411
-arvindthirumalai
+473411 - worked solo
+arvindthirumalai 
 
 Link to website: http://ec2-3-15-227-193.us-east-2.compute.amazonaws.com/~arvindthirumalai/module3/login.php?
 
 Some stories and comments already exist. 
 Users:
-1) Username: Username
-Password: password
+1) Username: Username, Password: password
 
-2) Username: Post 
-Password: Malone
+2) Username: Post, Password: Malone
 
-3) Username: arvind
-Password: arvind
+3) Username: arvind, Password: arvind
 
 
 Creative Portion Features:
