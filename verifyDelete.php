@@ -1,3 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Verify Delete</title>
+    <link href= "login.css" rel = "stylesheet"/>
+</head>
+<body>
 <?php
     require 'database.php';
     session_start();
@@ -66,11 +76,12 @@
         else
         {
             $deleting->close();
-            printf("Succesfully deleted. ");
             printf(" <form enctype = 'multipart/form-data' action = 'homepage.php' method = 'POST'>
-            <p> Back to homepage. </p>
+            <p> Successfully Deleted!. Back to homepage. </p>
             <input type = 'submit' value = 'Back to Homepage' /> </form>");
             exit;
         }
     }
 ?>
+</body>
+</html>
