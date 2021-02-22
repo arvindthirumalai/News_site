@@ -24,7 +24,7 @@
             <?php
                 require 'database.php';
                 session_start();
-                $stmt = $mysqli->prepare("SELECT id, title, body FROM stories");
+                $stmt = $mysqli->prepare("SELECT id, title, body, link FROM stories");
                 if(!$stmt){
                     printf("Query Prep Failed: %s\n", $mysqli->error);
                 }
@@ -33,7 +33,7 @@
                 {
                     printf("execute failed %s");
                 }
-                $resbind = $stmt->bind_result($userstoryid, $userstorytitle, $userstorybody);
+                $resbind = $stmt->bind_result($userstoryid, $userstorytitle, $userstorybody, $userstorylink);
                 if(!($resbind))
                 {
                     printf("bindres failed %s");
@@ -43,13 +43,17 @@
                 while($stmt->fetch())
                 {
                         printf("<br />");
-                        printf("\tStory ID: %s <br /> Story Title: %s <br />",
+                        printf("\tStory ID:\n %s <br /> Story Title: %s <br />",
                             htmlspecialchars($userstoryid), 
                             htmlspecialchars($userstorytitle));
 
                         printf("Story Body: %s <br />",
                             htmlspecialchars($userstorybody));
-                            printf("<br />");
+                        if($userstorylink != null)
+                        {
+                            printf("Link: %s <br />", htmlspecialchars($userstorylink));
+                        }
+                        printf("<br />");
                 }
                 printf("<form enctype = 'multipart/form-data' action = 'modifyComment.php' method = 'POST'>
                 <br /> <input type = 'submit' name = 'viewCom' value = 'View Comments' formaction = 'viewComments.php'/>
