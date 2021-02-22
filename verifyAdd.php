@@ -28,7 +28,7 @@
         $checkExecute = $addstmt->execute();
         if( (!$checkBind) || (!$checkExecute))
         {
-            printf("Either bind_param or execute addComment failed. %s", $mysqli->error);
+            printf("Make sure id value is accurate");
             $addstmt->close();
             exit;
         }
