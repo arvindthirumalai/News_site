@@ -32,6 +32,7 @@
     {
         $stmt->close();
         $_SESSION['id_user'] = $userid; 
+        $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
         header("Location: homepage.php");
         exit;
     }

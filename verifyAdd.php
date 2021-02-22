@@ -14,6 +14,10 @@
         $newaddcontent = $_POST['newaddCommentContent'];
         $newaddstoryID = (int) $_POST['newaddCommentStoryID'];
         $currentuserid = $_SESSION['id_user'];
+        if(!hash_equals($_SESSION['token'], $_POST['token']))
+        {
+	        die("Request forgery detected");
+        }
         $addstmt = $mysqli->prepare("INSERT into comments (content, comments.user_id, comments.story_id) values (?, ?, ?)");
         if(!$addstmt)
         {

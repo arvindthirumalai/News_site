@@ -3,6 +3,9 @@
     session_start();
     $delstoryid = $_POST['deletestoryid'];
     $userdelid = $_SESSION['id_user'];
+    if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	    die("Request forgery detected");
+    }
     $delrequest = $mysqli->prepare("SELECT COUNT(*), stories.user_id FROM stories WHERE stories.id=?");
     if(!$delrequest)
     {

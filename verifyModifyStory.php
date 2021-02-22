@@ -16,6 +16,9 @@
         $modifiedStoryTitle = $_POST['modifiedstorytitle'];
         $modifiedStoryContent = $_POST['modifiedstorycontent'];
         $modifiedStoryLink = $_POST['modifiedstorylink'];
+        if(!hash_equals($_SESSION['token'], $_POST['token'])){
+            die("Request forgery detected");
+        }
         $modifiedStory = $mysqli->prepare("SELECT stories.user_id FROM stories WHERE stories.id = ?");
         $chbp = $modifiedStory->bind_param('i', $tobemodifiedStoryID);
         $chex = $modifiedStory->execute();

@@ -14,6 +14,7 @@
         <br />
         <input type = "text" name = "newaddCommentStoryID" value = "ID of story" /> <br />
         <br />
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'];?>" />
         <input type = "submit" value = "Add Comment"/>
     </form>
 </body>

@@ -14,11 +14,7 @@
         <br />
         <input type = "submit" name = "login" value = "Delete story" />
         <br />
-    </form>
-    <form enctype="multipart/form-data" action = "homepage.php" method = "POST">
-         Back to homepage: <br />
-        <input type = "submit" name = "login" value = "Homepage" />
-        <br />
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'];?>" />
     </form>
 </body>
 </html>

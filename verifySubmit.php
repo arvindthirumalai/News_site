@@ -15,6 +15,9 @@
         $newsubmitstorytitle = $_POST['newsubmitStoryTitle'];
         $newsubmitstorycontent = $_POST['newsubmitStoryContent'];
         $newsubmitstorylink = $_POST['newsubmitStoryLink'];
+        if(!hash_equals($_SESSION['token'], $_POST['token'])){
+            die("Request forgery detected");
+        }
         if($newsubmitstorylink == "")
         {
             $newsubmitstorylink = null;

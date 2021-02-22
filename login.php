@@ -12,7 +12,7 @@
         <p> Enter Username and Password: </p>
         <input type = "text" name = "username" value = "Username" />
         <br />
-        <input type = "text" name = "password" value = "Password" />
+        <input type = "password" name = "password" value = "Password" />
         <br />
         <input type = "submit" name = "login" value = "Login" />
         <br />

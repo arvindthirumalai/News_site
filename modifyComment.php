@@ -15,6 +15,8 @@
         <input type = "text" name = "modifiedcommentid" value = "ID of Comment" /> <br />
         <br />
         <input type = "submit" value = "Modify Comment"/>
+        <br />
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'];?>" />
     </form>
 </body>
 </html>

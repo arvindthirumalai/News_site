@@ -11,8 +11,8 @@
     <div class = "commenttt">
     <?php
         require 'database.php';
-        $commentstoryid = (int) $_POST['viewstoryID'];
         session_start();
+        $commentstoryid = (int) $_POST['viewstoryID'];
         $commentslist = $mysqli->prepare("SELECT comments.id, comments.content FROM comments WHERE comments.story_id = ?");
         if(!$commentslist)
         {

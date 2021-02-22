@@ -14,6 +14,7 @@
         <br />
         <input type = "submit" value = "Delete Comment"/>
         <br />
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'];?>" />
     </form>
 </body>
 </html>

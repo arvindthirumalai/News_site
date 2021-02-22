@@ -16,7 +16,7 @@
         <br />
         <input type = "text" name = "username" value = "Username" />
         <br />
-        <input type = "text" name = "password" value = "password" />
+        <input type = "password" name = "password" value = "password" />
         <br />
         <input type = "submit" name = "Register" value = "Register" />
         <br />

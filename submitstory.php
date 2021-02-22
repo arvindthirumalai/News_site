@@ -18,6 +18,7 @@
         <input type = "text" name = "newsubmitStoryLink" value = "" /> <br />
         <br />
         <input type = "submit" value = "Submit Story"/>
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'];?>" />
     </form>
 </body>
 </html>

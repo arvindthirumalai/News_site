@@ -14,6 +14,9 @@
         session_start();
         $currentdeletecommuserid = $_SESSION['id_user'];
         $commenttobedeleted = (int) $_POST['deleteCommentID'];
+        if(!hash_equals($_SESSION['token'], $_POST['token'])){
+            die("Request forgery detected");
+        }
         $deleteuserauth = $mysqli->prepare("SELECT count(*), comments.user_id FROM comments WHERE comments.id = ?");
         $deleteuserauth->bind_param('i', $commenttobedeleted);
         $deleteuserauth->execute();

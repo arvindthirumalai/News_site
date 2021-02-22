@@ -15,6 +15,9 @@
         $currentmodifycommuserid = $_SESSION['id_user'];
         $commenttobemodified = (int) $_POST['modifiedcommentid'];
         $newcommentcontent = $_POST['modifiedcommentcontent'];
+        if(!hash_equals($_SESSION['token'], $_POST['token'])){
+            die("Request forgery detected");
+        }
         $modifyuserauth = $mysqli->prepare("SELECT comments.user_id FROM comments WHERE comments.id = ?");
         $checkbp = $modifyuserauth->bind_param('i', $commenttobemodified);
         $checkex = $modifyuserauth->execute();

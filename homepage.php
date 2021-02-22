@@ -59,9 +59,8 @@
                 <br /> <input type = 'submit' name = 'viewCom' value = 'View Comments' formaction = 'viewComments.php'/>
                   <input type = 'submit' name = 'modifyCom' value = 'Modify a Comment' /> 
                   <input type = 'submit' name = 'addCom' value = 'Add a Comment' formaction = 'addComment.php' /> 
-                  <input type = 'submit' name = 'deleteCom' value = 'Delete a Comment' formaction = 'deleteComment.php' /> <br />
-                </form>");
-                
+                  <input type = 'submit' name = 'deleteCom' value = 'Delete a Comment' formaction = 'deleteComment.php' /> <br /> 
+                  </form>");
                 printf("</div>");
                 echo "</ul>\n";
 
