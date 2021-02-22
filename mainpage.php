@@ -22,6 +22,7 @@
             <?php
                 require 'database.php';
                 session_start();
+                $_SESSION['id_user'] = -1;
                 $stmt = $mysqli->prepare("SELECT id, title, body FROM stories");
                 if(!$stmt){
                     printf("Query Prep Failed: %s\n", $mysqli->error);
