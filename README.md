@@ -20,3 +20,4 @@ Unregistered users cannot like other stories and they cannot see how many likes 
 2) Securely change password feature - Created a feature that would allow only registered users (obviously) to change their passwords. Used password_hash to hash the passwords and store them securely in the database. 
 
 
+# TA Comments: -2 as the site is not easy to navigate with needing to remember IDs of things to delete and not knowing which story or comment is yours; -2.5 not enough creative components
